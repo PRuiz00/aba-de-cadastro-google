@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - DinDin Verde</title>
+    <meta name="description" content="Página de cadastro no DinDin Verde">
+    <link rel="icon" type="image/x-icon" href="/Tudo/index/indext/img.index/favicon.ico">
+    <link rel="stylesheet" href="cadastro.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <main class="cadastro-container">
+        <section class="form-box">
+            <h2>Cadastro</h2>
+            <a href="/Tudo/index/indext/index.html" class="home-btn">← Voltar</a>
+
+            <div id="g_id_onload"
+                 data-client_id="60471379808-chu6l6a8478i2h70b8q5u2ifi09cd6i3.apps.googleusercontent.com"
+                 data-context="signup"
+                 data-ux_mode="popup"
+                 data-login_uri="https://seusite.com/processa_login_google"
+                 data-auto_prompt="false">
+            </div>
+
+            <div class="g_id_signin"
+                 data-type="standard"
+                 data-shape="rectangular"
+                 data-theme="outline"
+                 data-text="signup_with"
+                 data-size="large"
+                 data-logo_alignment="left">
+            </div>
+
+            <div class="divider"><span>OU</span></div>
+
+            <form action="/processa_cadastro.php" method="POST" id="cadastro-form">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Senha" required>
+
+                <label for="confirma-senha">Confirme a senha</label>
+                <input type="password" id="confirma-senha" name="confirma-senha" placeholder="Confirme a senha" required>
+
+                <button type="submit" class="submit-btn">ENVIAR</button>
+            </form>
+        </section>
+    </main>
+
+    <button id="back-to-top" title="Voltar ao topo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="arrow-up-icon">
+            <path d="M12 5.172l-5.293 5.293-1.414-1.414L12 2.344l6.707 6.707-1.414 1.414L12 5.172zM12 21v-15h1v15h-1z"/>
+        </svg>
+    </button>
+
+    <script src="cadastro.js"></script>
+</body>
+</html>
